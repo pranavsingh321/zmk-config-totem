@@ -107,7 +107,7 @@
             bindings = <
           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &kp SEMI
           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &mt RGUI O
-&kp CAPS  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &none       &tmuxbegin
+&kp CAPS  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &kp BACKSPACE  &tmuxbegin
                                   &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
             >;
         };
