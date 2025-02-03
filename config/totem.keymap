@@ -81,6 +81,13 @@
             bindings = <&kp RC(B) &kp DOWN_ARROW>;
             label = "TDOWN";
         };
+
+        ctrlw: ctrlw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(W)>;
+            label = "CTRLW";
+        };
     };
 
     keymap {
@@ -105,7 +112,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &kp SEMI
+          &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &ctrlw
           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &mt RGUI O
 &kp CAPS  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &tmuxbegin  &kp BACKSPACE
                                   &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
