@@ -146,10 +146,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &msc SCRL_UP    &mkp MB4   &kp UP    &none      &kp LBRC    &kp RBRC  &none   &tup    &mkp MB5  &msc SCRL_UP
-                &mkp LCLK       &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &tleft  &tdown  &tright   &mkp RCLK
-&mmv MOVE_LEFT  &msc SCRL_DOWN  &kp PG_UP  &none     &kp PG_DN  &kp LPAR    &kp RPAR  &none   &none   &none     &msc SCRL_DOWN  &mmv MOVE_RIGHT
-                                           &trans    &trans     &trans      &mo 3     &none   &trans
+                &mmv MOVE_UP    &msc SCRL_UP    &kp UP    &none      &kp LBRC    &kp RBRC  &none   &tup      &msc SCRL_UP    &mmv MOVE_UP
+                &mkp LCLK       &kp LEFT        &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &tleft  &tdown    &tright         &mkp RCLK
+&mmv MOVE_LEFT  &mmv MOVE_DOWN  &msc SCRL_DOWN  &mkp MB4  &kp PG_DN  &kp LPAR    &kp RPAR  &none   &mkp MB5  &msc SCRL_DOWN  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+                                                &trans    &trans     &trans      &mo 3     &none   &trans
             >;
         };
 
