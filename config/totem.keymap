@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // adjust as needed
-            bindings = <&caps_word>, <&kp CAPS_LOCK>, &trans;
+            bindings = <&caps_word>, <&kp CAPS_LOCK>;
         };
     };
 
