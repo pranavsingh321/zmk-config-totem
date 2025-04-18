@@ -14,6 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -145,10 +146,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none  &none      &kp UP    &none      &kp LBRC    &kp RBRC  &none   &tup    &none    &none
-        &none  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &tleft  &tdown  &tright  &none
-&trans  &none  &kp PG_UP  &none     &kp PG_DN  &kp LPAR    &kp RPAR  &none   &none   &none    &none  &none
-                          &trans    &trans     &trans      &mo 3     &none   &trans
+                &msc SCRL_UP    &mkp MB4   &kp UP    &none      &kp LBRC    &kp RBRC  &none   &tup    &mkp MB5  &msc SCRL_UP
+                &mkp LCLK       &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &tleft  &tdown  &tright   &mkp RCLK
+&mmv MOVE_LEFT  &msc SCRL_DOWN  &kp PG_UP  &none     &kp PG_DN  &kp LPAR    &kp RPAR  &none   &none   &none     &msc SCRL_DOWN  &mmv MOVE_RIGHT
+                                           &trans    &trans     &trans      &mo 3     &none   &trans
             >;
         };
 
