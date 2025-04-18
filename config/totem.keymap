@@ -34,11 +34,10 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        td_capsword_lock: td_capsword_lock {
+        td_caps: td_caps {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; // adjust as needed
-            bindings = <&caps_word>, <&kp CAPS_LOCK>;
+            #binding-cells = <0>; // adjust as needed
+            bindings = <&caps_word>, <&kp CAPS>;
         };
     };
 
@@ -115,10 +114,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &tmuxmode
-            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &mt RGUI O
-&td_capsword_lock  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &tmuxbegin  &kp BACKSPACE
-                                    &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
+          &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &tmuxmode
+          &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &mt RGUI O
+&td_caps  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &tmuxbegin  &kp BACKSPACE
+                                  &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
             >;
         };
 
