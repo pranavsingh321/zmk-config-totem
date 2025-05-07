@@ -90,6 +90,20 @@
             bindings = <&kp LC(B) &kp LEFT_BRACKET>;
             label = "TMUXMODE";
         };
+
+        close: close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F4)>;
+            label = "CLOSE";
+        };
+
+        close_mac: close_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_META &kp F4>;
+            label = "CLOSE_MAC";
+        };
     };
 
     keymap {
@@ -166,10 +180,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp QUESTION  &kp AMPS  &kp TILDE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp MINUS
-           &kp EXCL      &kp AT    &kp HASH   &kp DOLLAR        &kp PERCENT          &kp SLASH      &kp N4  &kp N5  &kp N6  &kp N0
-&kp GRAVE  &kp EQUAL     &kp LT    &kp GT     &kp SEMICOLON     &kp COLON            &kp PIPE       &kp N1  &kp N2  &kp N3  &kp PLUS   &kp ASTRK
-                                   &kp CARET  &kp UNDER         &mo 3                &trans         &none   &trans
+           &kp QUESTION  &kp AMPS  &kp TILDE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE    &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp MINUS
+           &kp EXCL      &kp AT    &kp HASH   &kp DOLLAR         &kp PERCENT         &kp SLASH      &kp N4  &kp N5  &kp N6  &kp N0
+&kp GRAVE  &kp EQUAL     &kp LT    &kp GT     &kp SEMICOLON      &kp COLON           &kp PIPE       &kp N1  &kp N2  &kp N3  &kp PLUS   &kp ASTRK
+                                   &kp CARET  &kp UNDER          &mo 3               &trans         &none   &trans
             >;
         };
 
@@ -192,10 +206,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &bt BT_SEL 3  &bt BT_SEL 0  &out OUT_TOG  &kp C_PLAY_PAUSE  &kp C_MUTE           &trans  &kp F7  &kp F8  &kp F9  &kp F12
-            &bt BT_SEL 4  &bt BT_SEL 1  &sys_reset    &kp C_BRI_UP      &kp C_VOLUME_UP      &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_CLR  &trans        &bt BT_SEL 2  &bootloader   &kp C_BRI_DEC     &kp C_VOLUME_DOWN    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                        &trans        &trans            &trans               &trans  &trans  &trans
+            &bt BT_SEL 3  &bt BT_SEL 0  &out OUT_TOG  &kp C_PLAY_PAUSE  &kp C_MUTE           &close      &kp F9  &kp F10  &kp F11  &kp F12
+            &bt BT_SEL 4  &bt BT_SEL 1  &sys_reset    &kp C_BRI_UP      &kp C_VOLUME_UP      &close_mac  &kp F5  &kp F6   &kp F7   &kp F8
+&bt BT_CLR  &trans        &bt BT_SEL 2  &trans        &kp C_BRI_DEC     &kp C_VOLUME_DOWN    &trans      &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                                        &trans        &trans            &trans               &trans      &trans  &trans
             >;
         };
 
