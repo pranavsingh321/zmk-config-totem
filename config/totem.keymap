@@ -30,6 +30,20 @@
     tapping-term-ms = <180>;
 };
 
+&mt LGUI A {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <250>;
+};
+
+&mt RGUI O {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <250>;
+};
+
 / {
     combos { compatible = "zmk,combos"; };
 
