@@ -40,13 +40,13 @@
             bindings = <&caps_word>, <&kp CAPS>;
         };
 
-        custom_tap: custom_tap {
+        custom_hold_tap: custom_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "CUSTOM_TAP";
+            label = "CUSTOM_HOLD_TAP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
@@ -139,10 +139,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q               &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &tmuxmode
-          &custom_tap LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &custom_tap RGUI O
-&td_caps  &kp Z               &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &tmuxbegin          &kp BACKSPACE
-                                          &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
+          &kp Q                    &kp W       &kp F        &kp P        &kp B        &kp J    &kp L            &kp U        &kp Y            &tmuxmode
+          &custom_hold_tap LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N      &mt RCTRL E  &mt RIGHT_ALT I  &custom_hold_tap RGUI O
+&td_caps  &kp Z                    &kp X       &kp C        &kp D        &kp V        &kp K    &kp H            &kp COMMA    &kp DOT          &tmuxbegin               &kp BACKSPACE
+                                               &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
             >;
         };
 
