@@ -140,8 +140,8 @@
 
             bindings = <
           &kp Q                    &kp W                    &kp E        &kp R        &kp T        &kp Y    &kp U            &kp I        &kp O                         &kp P
-          &custom_hold_tap LGUI A  &custom_hold_tap LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J      &mt RCTRL K  &custom_hold_tap RIGHT_ALT L  &custom_hold_tap RIGHT_WIN BACKSPACE
-&td_caps  &kp Z                    &kp X                    &kp C        &kp V        &kp B        &kp N    &kp M            &kp COMMA    &kp DOT                       &tmuxbegin                            &tmuxmode
+          &custom_hold_tap LGUI A  &custom_hold_tap LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J      &mt RCTRL K  &custom_hold_tap RIGHT_ALT L  &kp BACKSPACE
+&td_caps  &kp Z                    &kp X                    &kp C        &kp V        &kp B        &kp N    &kp M            &kp COMMA    &kp DOT                       &tmuxbegin     &tmuxmode
                                                             &kp DEL      &lt 1 TAB    &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp ESCAPE
             >;
         };
