@@ -26,9 +26,7 @@ jobs:
 
       - name: Build Totem Shields
         run: |
-          # Define shields
           SHIELDS=("totem_left" "totem_right" "settings_reset")
-
           for SHIELD in "${SHIELDS[@]}"; do
             BUILD_DIR="build/$SHIELD"
             echo "Building shield: $SHIELD -> $BUILD_DIR"
@@ -38,7 +36,7 @@ jobs:
           done
 
       - name: Upload UF2 artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: totem-uf2
           path: |
