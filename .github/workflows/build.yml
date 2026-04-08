@@ -1,47 +1,7 @@
-name: Build Totem Firmware
+name: Build ZMK firmware
+
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    steps:
-      # 1️⃣ Checkout your repo with submodules
-      - name: Checkout repo
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive  # zephyr/ must be a submodule
-
-      # 2️⃣ Install dependencies
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y python3-pip ninja-build cmake gcc-arm-none-eabi git
-
-      # 3️⃣ Install west
-      - name: Install west
-        run: |
-          pip3 install --user west
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-      # 4️⃣ Build Totem shields directly from your repo
-      - name: Build Totem Shields
-        run: |
-          SHIELDS=("totem_left" "totem_right" "settings_reset")
-          for SHIELD in "${SHIELDS[@]}"; do
-            BUILD_DIR="build/$SHIELD"
-            echo "Building shield: $SHIELD -> $BUILD_DIR"
-            west build -s zmk/app -d "$BUILD_DIR" \
-              -b xiao_ble/nrf52840/zmk \
-              -- -DZMK_CONFIG=./zmk/config -DSHIELD="$SHIELD"
-          done
-
-      # 5️⃣ Upload artifacts
-      - name: Upload UF2 artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: totem-uf2
-          path: |
-            build/totem_left/zephyr/zmk.uf2
-            build/totem_right/zephyr/zmk.uf2
-            build/settings_reset/zephyr/zmk.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
